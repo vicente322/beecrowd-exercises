@@ -27,12 +27,13 @@ public class Main{
 
           for (int i = 1; i <= t; i++){
                 n = sc.nextInt();
-                int[] f = new int[n];
+                int[] f = new int[61];
                 f[0] = 0;
                 f[1] = 1;
 
-                for (int c = 2; c <= n; c++){
-                      f[c] = f[c - 1] + f[c - 2];
+
+                for (int j = 2; j < n; j++){
+                    f[j] = f[j - 1] + f[j - 2];
                 }
 
                 System.out.printf("Fib(%d) = %d\n", n, f[n]);
