@@ -21,22 +21,22 @@ public class Main{
 
       public static void main(String args[]){
 
-      Scanner sc = new Scanner(System.in);
-      int t = sc.nextInt();
-      int n;
+          Scanner sc = new Scanner(System.in);
+          int t = sc.nextInt();
+          int n;
 
-      for (int i = 1; i <= t; i++){
-            n = sc.nextInt();
-            int[] f = new int[n];
-            f[0] = 0;
-            f[1] = 1;
+          for (int i = 1; i <= t; i++){
+                n = sc.nextInt();
+                int[] f = new int[n];
+                f[0] = 0;
+                f[1] = 1;
 
-            for (int c = 2; c <= n; c++){
-                  f[c] = f[c - 1] + f[c - 2];
-            }
+                for (int c = 2; c <= n; c++){
+                      f[c] = f[c - 1] + f[c - 2];
+                }
 
-            System.out.printf("Fib(%d) = %d\n", n, f[n]);
-      }
+                System.out.printf("Fib(%d) = %d\n", n, f[n]);
+          }
 
       }
 }
